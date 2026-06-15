@@ -4,90 +4,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AI Robotics 课程实验记录</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+*{
     margin:0;
-    font-family:"Microsoft YaHei",sans-serif;
-    background:#f4f7fb;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Noto Sans SC',sans-serif;
+    background:#f5f7fb;
     color:#333;
 }
 
+/* 顶部Banner */
+
 .hero{
-    background:linear-gradient(135deg,#4f8cff,#6c63ff);
-    color:white;
+    height:500px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #1e3a8a,
+        #2563eb,
+        #06b6d4
+    );
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
     text-align:center;
-    padding:100px 20px;
+    color:white;
 }
 
 .hero h1{
-    font-size:60px;
+    font-family:'Orbitron',sans-serif;
+    font-size:70px;
     margin-bottom:20px;
+    text-shadow:0 5px 20px rgba(0,0,0,.2);
 }
 
 .hero p{
     font-size:24px;
-    opacity:0.9;
+    opacity:.9;
 }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 30px;
+.hero-btn{
+    margin-top:35px;
+    padding:15px 35px;
     background:white;
-    color:#4f8cff;
+    color:#2563eb;
     text-decoration:none;
-    border-radius:30px;
+    border-radius:50px;
     font-weight:bold;
+    transition:.3s;
 }
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* 内容 */
 
 .container{
-    width:85%;
-    max-width:1000px;
-    margin:40px auto;
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    margin-top:-60px;
 }
+
+/* 卡片 */
 
 .card{
     background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    border-radius:20px;
+    padding:35px;
     margin-bottom:30px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
 }
 
 .card h2{
-    color:#4f8cff;
+    color:#2563eb;
+    margin-bottom:20px;
 }
+
+/* 信息 */
+
+.info p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* Week卡片 */
 
 .week-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:15px;
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+    gap:18px;
 }
 
 .week{
-    background:#eef4ff;
+    background:
+    linear-gradient(
+        135deg,
+        #eff6ff,
+        #dbeafe
+    );
+
+    border-radius:15px;
     padding:20px;
-    border-radius:12px;
-    transition:0.3s;
+    transition:.3s;
 }
 
 .week:hover{
     transform:translateY(-5px);
+    box-shadow:
+    0 10px 20px rgba(37,99,235,.2);
 }
 
 .week a{
     text-decoration:none;
-    color:#333;
+    color:#1e3a8a;
     font-weight:bold;
 }
 
+/* 技能条 */
+
+.skill{
+    margin:20px 0;
+}
+
+.skill-title{
+    margin-bottom:8px;
+}
+
+.bar{
+    height:12px;
+    background:#e5e7eb;
+    border-radius:50px;
+}
+
+.fill{
+    height:12px;
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #06b6d4,
+    #2563eb
+    );
+}
+
+/* Footer */
+
 .footer{
     text-align:center;
-    padding:30px;
+    padding:40px;
     color:#666;
+}
+
+/* 手机 */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
 }
 
 </style>
@@ -95,91 +193,164 @@ body{
 
 <body>
 
-<div class="hero">
+<section class="hero">
 
 <h1>🤖 AI Robotics</h1>
 
-<p>Sharon Wang 课程实验记录</p>
+<p>Sharon Wang · 课程实验记录与项目展示</p>
 
-<a class="btn" href="https://github.com/sharonwwww/SHARON">
-查看 GitHub
+<a class="hero-btn"
+href="https://github.com/sharonwwww/SHARON">
+查看 GitHub 仓库
 </a>
 
-</div>
+</section>
 
 <div class="container">
 
+<!-- 基本信息 -->
+
 <div class="card">
 
-<h2>📖 课程简介</h2>
+<h2>📖 课程信息</h2>
 
-<p>
-本网站用于展示 AI Robotics 课程学习成果，
-包括 ROS2、Python、Docker、OpenCV、
-机器人运动学、传感器技术以及课程实验记录。
-</p>
+<div class="info">
+
+<p><strong>姓名：</strong>Sharon Wang</p>
+
+<p><strong>课程：</strong>AI Robotics</p>
+
+<p><strong>学校：</strong>신한대학교（Shinhan University）</p>
+
+<p><strong>内容：</strong>第2周至第13周课程实验与学习记录</p>
 
 </div>
 
+</div>
+
+<!-- 作业目录 -->
+
 <div class="card">
 
-<h2>📚 每周作业</h2>
+<h2>📚 每周作业目录</h2>
 
 <div class="week-grid">
 
 <div class="week">
-<a href="week2/">Week 2 - ROS2基础命令与Turtlesim实验</a>
+<a href="week2/">Week 2｜ROS2基础命令与Turtlesim实验</a>
 </div>
 
 <div class="week">
-<a href="week3/">Week 3 - ROS2 Python节点与机器人控制</a>
+<a href="week3/">Week 3｜ROS2 Python节点与机器人控制</a>
 </div>
 
 <div class="week">
-<a href="week4/">Week 4 - ROS2通信基础实验</a>
+<a href="week4/">Week 4｜ROS2通信基础实验</a>
 </div>
 
 <div class="week">
-<a href="week5/">Week 5 - Linux与机器人环境</a>
+<a href="week5/">Week 5｜Linux与机器人环境</a>
 </div>
 
 <div class="week">
-<a href="week6/">Week 6 - 传感器与数据处理</a>
+<a href="week6/">Week 6｜传感器与数据处理</a>
 </div>
 
 <div class="week">
-<a href="week8/">Week 8 - Docker环境实验</a>
+<a href="week8/">Week 8｜Docker环境实验</a>
 </div>
 
 <div class="week">
-<a href="week11/">Week 11 - Docker容器实验</a>
+<a href="week11/">Week 11｜Docker容器实验</a>
 </div>
 
 <div class="week">
-<a href="week12/">Week 12 - 四足机器人仿真</a>
+<a href="week12/">Week 12｜四足机器人仿真</a>
 </div>
 
 <div class="week">
-<a href="week13/">Week 13 - 课程综合总结</a>
+<a href="week13/">Week 13｜课程综合总结</a>
 </div>
 
 </div>
 
 </div>
+
+<!-- 技能 -->
 
 <div class="card">
 
-<h2>🎯 学习成果</h2>
+<h2>🚀 技能掌握情况</h2>
 
-<ul>
-<li>掌握 Linux 与 Ubuntu 环境配置</li>
-<li>掌握 ROS2 节点开发与通信机制</li>
-<li>掌握 Python 机器人程序开发</li>
-<li>掌握 Docker 容器部署技术</li>
-<li>掌握 OpenCV 图像处理技术</li>
-<li>掌握机器人运动学基础</li>
-<li>掌握 GitHub 项目管理与协作</li>
-</ul>
+<div class="skill">
+
+<div class="skill-title">ROS2</div>
+
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">Python</div>
+
+<div class="bar">
+<div class="fill" style="width:88%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">Docker</div>
+
+<div class="bar">
+<div class="fill" style="width:82%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">OpenCV</div>
+
+<div class="bar">
+<div class="fill" style="width:85%"></div>
+</div>
+
+</div>
+
+<div class="skill">
+
+<div class="skill-title">GitHub</div>
+
+<div class="bar">
+<div class="fill" style="width:92%"></div>
+</div>
+
+</div>
+
+</div>
+
+<!-- 简介 -->
+
+<div class="card">
+
+<h2>📝 课程简介</h2>
+
+<p style="line-height:2;">
+
+本网站用于展示 AI Robotics 课程学习过程与实验成果，
+涵盖 ROS2、Python、Linux、Docker、OpenCV、
+机器人运动学、传感器技术以及机器人综合项目实践。
+
+通过课程学习，逐步掌握机器人软件开发流程、
+ROS2通信机制、计算机视觉基础以及机器人系统集成能力，
+并完成每周实验报告与项目实践记录。
+
+</p>
 
 </div>
 
@@ -187,7 +358,7 @@ body{
 
 <div class="footer">
 
-© 2026 Sharon Wang | AI Robotics Course Portfolio
+© 2026 Sharon Wang · AI Robotics Course Portfolio
 
 </div>
 
