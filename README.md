@@ -4,7 +4,7 @@
 
 - 姓名：WANG SHANGRONG
 - 学校：信韩大学（Shinhan University）
-- 专业：AI机器人（AI Robotics）
+- 专业：软件工程
 - 课程：AI机器人
 - 指导教师：赵瑞楠（조서남）
 
